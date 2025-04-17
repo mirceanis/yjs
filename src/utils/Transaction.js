@@ -14,11 +14,11 @@ import {
   UpdateEncoderV1, UpdateEncoderV2, GC, StructStore, AbstractType, AbstractStruct, YEvent, Doc // eslint-disable-line
 } from '../internals.js'
 
-import * as map from 'lib0/map'
-import * as math from 'lib0/math'
-import * as set from 'lib0/set'
-import * as logging from 'lib0/logging'
-import { callAll } from 'lib0/function'
+import * as map from '../lib0/map.js'
+import * as math from '../lib0/math.js'
+import * as set from '../lib0/set.js'
+// import * as logging from '../l0-utils/logging.js'
+import { callAll } from '../lib0/function.js'
 
 /**
  * A transaction is created for every change on the Yjs model. It is possible
@@ -351,7 +351,7 @@ const cleanupTransactions = (transactionCleanups, i) => {
         }
       }
       if (!transaction.local && transaction.afterState.get(doc.clientID) !== transaction.beforeState.get(doc.clientID)) {
-        logging.print(logging.ORANGE, logging.BOLD, '[yjs] ', logging.UNBOLD, logging.RED, 'Changed the client-id because another client seems to be using it.')
+        // logging.print(logging.ORANGE, logging.BOLD, '[yjs] ', logging.UNBOLD, logging.RED, 'Changed the client-id because another client seems to be using it.')
         doc.clientID = generateNewClientId()
       }
       // @todo Merge all the transactions into one and provide send the data as a single update message

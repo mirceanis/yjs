@@ -2,7 +2,7 @@ import {
   YText, UpdateDecoderV1, UpdateDecoderV2, UpdateEncoderV1, UpdateEncoderV2, Item, StructStore, Transaction // eslint-disable-line
 } from '../internals.js'
 
-import * as error from 'lib0/error'
+import * as error from '../lib0/error.js'
 
 /**
  * @private

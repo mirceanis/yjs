@@ -1,12 +1,12 @@
-import * as binary from 'lib0/binary'
-import * as decoding from 'lib0/decoding'
-import * as encoding from 'lib0/encoding'
-import * as error from 'lib0/error'
-import * as f from 'lib0/function'
-import * as logging from 'lib0/logging'
-import * as map from 'lib0/map'
-import * as math from 'lib0/math'
-import * as string from 'lib0/string'
+import * as binary from '../lib0/binary.js'
+import * as decoding from '../lib0/decoding.js'
+import * as encoding from '../lib0/encoding.js'
+import * as error from '../lib0/error.js'
+import * as f from '../lib0/function.js'
+// import * as logging from '../l0-utils/logging.js'
+import * as map from '../lib0/map.js'
+import * as math from '../lib0/math.js'
+import * as string from '../lib0/string.js'
 
 import {
   ContentAny,
@@ -127,9 +127,9 @@ export const logUpdateV2 = (update, YDecoder = UpdateDecoderV2) => {
   for (let curr = lazyDecoder.curr; curr !== null; curr = lazyDecoder.next()) {
     structs.push(curr)
   }
-  logging.print('Structs: ', structs)
+  console.log('Structs: ', structs)
   const ds = readDeleteSet(updateDecoder)
-  logging.print('DeleteSet: ', ds)
+  console.log('DeleteSet: ', ds)
 }
 
 /**

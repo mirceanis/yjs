@@ -39,12 +39,12 @@ import {
   DSDecoderV2, Doc, Transaction, GC, Item, StructStore // eslint-disable-line
 } from '../internals.js'
 
-import * as encoding from 'lib0/encoding'
-import * as decoding from 'lib0/decoding'
-import * as binary from 'lib0/binary'
-import * as map from 'lib0/map'
-import * as math from 'lib0/math'
-import * as array from 'lib0/array'
+import * as encoding from '../lib0/encoding.js'
+import * as decoding from '../lib0/decoding.js'
+import * as binary from '../lib0/binary.js'
+import * as map from '../lib0/map.js'
+import * as math from '../lib0/math.js'
+import * as array from '../lib0/array.js'
 
 /**
  * @param {UpdateEncoderV1 | UpdateEncoderV2} encoder

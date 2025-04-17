@@ -13,16 +13,15 @@ import {
   ContentDoc, YText, YArray, UpdateEncoderV1, UpdateEncoderV2, Doc, Snapshot, Transaction, EventHandler, YEvent, Item, // eslint-disable-line
 } from '../internals.js'
 
-import * as map from 'lib0/map'
-import * as iterator from 'lib0/iterator'
-import * as error from 'lib0/error'
-import * as math from 'lib0/math'
-import * as log from 'lib0/logging'
+import * as map from '../lib0/map.js'
+import * as iterator from '../lib0/iterator.js'
+import * as error from '../lib0/error.js'
+import * as math from '../lib0/math.js'
 
 /**
  * https://docs.yjs.dev/getting-started/working-with-shared-types#caveats
  */
-export const warnPrematureAccess = () => { log.warn('Invalid access: Add Yjs type to a document before reading data.') }
+export const warnPrematureAccess = () => { console.warn('Invalid access: Add Yjs type to a document before reading data.') }
 
 const maxSearchMarker = 80
 

@@ -13,10 +13,10 @@ import {
   YEvent, Transaction, Doc, Item, GC, DeleteSet, AbstractType // eslint-disable-line
 } from '../internals.js'
 
-import * as time from 'lib0/time'
-import * as array from 'lib0/array'
-import * as logging from 'lib0/logging'
-import { ObservableV2 } from 'lib0/observable'
+import * as time from '../lib0/time.js'
+import * as array from '../lib0/array.js'
+// import * as logging from '../l0-utils/logging.js'
+import { ObservableV2 } from '../lib0/observable.js'
 
 export class StackItem {
   /**
@@ -282,7 +282,7 @@ export class UndoManager extends ObservableV2 {
     ytypes.forEach(ytype => {
       if (!tmpSet.has(ytype)) {
         tmpSet.add(ytype)
-        if (ytype instanceof AbstractType ? ytype.doc !== this.doc : ytype !== this.doc) logging.warn('[yjs#509] Not same Y.Doc') // use MultiDocUndoManager instead. also see https://github.com/yjs/yjs/issues/509
+        // if (ytype instanceof AbstractType ? ytype.doc !== this.doc : ytype !== this.doc) logging.warn('[yjs#509] Not same Y.Doc') // use MultiDocUndoManager instead. also see https://github.com/yjs/yjs/issues/509
         this.scope.push(ytype)
       }
     })

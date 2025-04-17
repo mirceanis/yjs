@@ -20,10 +20,10 @@ import {
   mergeDeleteSets
 } from '../internals.js'
 
-import * as map from 'lib0/map'
-import * as set from 'lib0/set'
-import * as decoding from 'lib0/decoding'
-import * as encoding from 'lib0/encoding'
+import * as map from '../lib0/map.js'
+import * as set from '../lib0/set.js'
+import * as decoding from '../lib0/decoding.js'
+import * as encoding from '../lib0/encoding.js'
 
 export class Snapshot {
   /**
