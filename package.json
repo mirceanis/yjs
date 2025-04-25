@@ -16,6 +16,7 @@
     "test": "npm run dist && NODE_ENV=development node ./dist/tests.cjs --repetition-time 50",
     "test-extensive": "npm run lint && npm run dist && node ./dist/tests.cjs --production --repetition-time 10000",
     "dist": "npm run clean && rollup -c && tsc && cp ./dist/src/index.d.ts ./dist/src/index.d.cts",
+    "postinstall": "npm run dist",
     "watch": "rollup -wc",
     "lint": "markdownlint README.md && standard && tsc",
     "docs": "rm -rf docs; jsdoc --configure ./.jsdoc.json --verbose --readme ./README.md --package ./package.json || true",
